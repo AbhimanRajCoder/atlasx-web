@@ -1,0 +1,207 @@
+
+/* hero css */
+.hero-section{
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.hero-overlay{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+.hero-background-video::before{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem; 
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+
+
+/* cards css */
+
+
+.cardcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    width: 100%;
+    min-height: 700px;
+    margin-bottom: 10%;
+}
+
+.cards {
+  width: 500px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.005));
+  color: #f5f5f5; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  padding: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+.cards h1{
+  font-size:1.5rem;
+}
+.cards p{
+  font-size:1rem;
+}
+.cards:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(149, 96, 255, 0.6);
+  border: 1px solid rgba(149, 96, 255, 0.8);
+}
+
+
+.cardimg{
+    width: 150px;
+    height: 150px;
+}
+
+.parallax-strip {
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* promo text */
+
+
+.promo-text-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: radial-gradient(ellipse at bottom, #050509 0%, #000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stars, .stars2, .stars3, .stars4, .stars5, .stars6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  opacity: 0.8;
+}
+
+/* Example for stars layer using box-shadow for full coverage */
+.stars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow:
+    10px 20px white, 50px 60px white, 90px 120px white, 150px 200px white,
+    210px 240px white, 300px 350px white, 400px 420px white, 500px 600px white,
+    600px 650px white, 700px 800px white, 850px 900px white, 950px 1000px white;
+  animation: moveStars 120s linear infinite;
+}
+
+
+
+
+
+.overlay-text {
+  font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+  color: #dbdcdd; 
+  display: inline-block;
+  /* animation: wavy 4s ease-in-out infinite; */
+}
+
+/* Wave-like floating animation */
+/* @keyframes wavy {
+  0% {
+    transform: translateY(0) rotate(0deg); 
+  }
+  25% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(6px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+} */
+
+.spline-container {
+  position: relative;
+}
+
+.hide-badge {
+  position: absolute;
+  bottom: 10px; /* adjust according to badge position */
+  right: 10px;
+  width: 80px;  /* size of badge */
+  height: 20px;
+  background: transparent;
+  z-index: 10;
+}
