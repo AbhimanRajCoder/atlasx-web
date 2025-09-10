@@ -213,7 +213,7 @@ else{
       </div>
     </>
   ) : (
-    <p className="no-data">No trajectory data available.</p>
+    <p className="no-data">Start Mission to See Trajectory Data.</p>
   )}
 </div>
 

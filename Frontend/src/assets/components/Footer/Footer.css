@@ -79,3 +79,62 @@ transition: transform .2s cubic-bezier(.6,.6,0,1), margin-top .2s cubic-bezier(.
     text-align: center;
     font-size: 0.6rem;
 }
+
+@media (max-width: 768px) {
+  .footercontainer {
+    height: auto;
+    min-height: 200px;
+  }
+  
+  .footerdiv {
+    flex-direction: column;
+    margin: 8% 5%;
+  }
+  
+  .footerbrand, .navdiv {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  
+  .navdiv {
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  
+  .footernavgroup {
+    flex-direction: column;
+    padding: 4%;
+  }
+  
+  .footer-item {
+    padding: 5%;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .cptext-div {
+    margin-top: -2%;
+    margin-bottom: 8%;
+  }
+  
+  .copyright-text {
+    font-size: 0.7rem;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-item {
+    font-size: 0.75rem;
+    padding: 4%;
+  }
+  
+  .copyright-text {
+    font-size: 0.65rem;
+  }
+  
+  .footerdiv {
+    margin: 10% 5%;
+  }
+}

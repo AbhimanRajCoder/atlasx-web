@@ -29,19 +29,6 @@ font-size:2.5rem;
   padding: 20px;
 }
 
-/* .data-entry {
-  flex: 1 1 calc(33.333% - 40px); 
-  background: radial-gradient(circle at top left, #111827, #000000);
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-  background-size: cover;
-   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05), 
-              0 0 15px rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  min-width: 250px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-} */
 
 .data-row {
   display: flex;
@@ -56,4 +43,61 @@ font-size:2.5rem;
 
 .data-value {
   font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .data-entry {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .h3tag {
+    font-size: 2rem;
+  }
+  
+  .data-entry {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .h3tag {
+    font-size: 1.5rem;
+  }
+  
+  .data-row {
+    flex-direction: column;
+  }
+}
+
+.loading-space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  color: #fff;
+  text-align: center;
+}
+
+.planet-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid #c2a5f0;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  margin-bottom: 15px;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
 }

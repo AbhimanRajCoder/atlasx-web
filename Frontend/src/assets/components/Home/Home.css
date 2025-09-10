@@ -1,4 +1,3 @@
-
 /* hero css */
 .hero-section{
   position: relative;
@@ -47,11 +46,54 @@
   margin-top: 0.5rem;
 }
 
+/* Hero Media Queries */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+}
 
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+  
+  .hero-overlay {
+    width: 90%;
+  }
+}
 
 /* cards css */
-
-
 .cardcontainer{
     display: flex;
     align-items: center;
@@ -60,6 +102,7 @@
     width: 100%;
     min-height: 700px;
     margin-bottom: 10%;
+    flex-wrap: wrap;
 }
 
 .cards {
@@ -92,10 +135,92 @@
   border: 1px solid rgba(149, 96, 255, 0.8);
 }
 
-
 .cardimg{
     width: 150px;
     height: 150px;
+}
+
+/* Cards Media Queries */
+@media (max-width: 1200px) {
+  .cards {
+    width: 450px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardcontainer {
+    min-height: auto;
+  }
+  
+  .cards {
+    width: 400px;
+    height: 320px;
+    margin: 1.5%;
+  }
+  
+  .cardimg {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 868px) {
+  .cards {
+    width: 350px;
+    height: 300px;
+  }
+  
+  .cards h1 {
+    font-size: 1.3rem;
+  }
+  
+  .cards p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardcontainer {
+    flex-direction: column;
+    margin-bottom: 15%;
+  }
+  
+  .cards {
+    width: 85%;
+    height: auto;
+    min-height: 280px;
+    margin: 15px 0;
+  }
+  
+  .cardimg {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards {
+    width: 90%;
+    padding: 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .cards h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .cards p {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .cardimg {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .parallax-strip {
@@ -119,10 +244,50 @@
   text-align: center;
 }
 
+/* Parallax Media Queries */
+@media (max-width: 1200px) {
+  .parallax-strip {
+    height: 250px;
+  }
+  
+  .overlay-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .parallax-strip {
+    height: 220px;
+  }
+  
+  .overlay-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-strip {
+    height: 200px;
+    background-attachment: scroll;
+  }
+  
+  .overlay-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .parallax-strip {
+    height: 180px;
+  }
+  
+  .overlay-text {
+    font-size: 2rem;
+    padding: 8px 16px;
+  }
+}
 
 /* promo text */
-
-
 .promo-text-container {
   width: 100%;
   height: 100vh;
@@ -161,36 +326,51 @@
   animation: moveStars 120s linear infinite;
 }
 
-
-
-
-
 .overlay-text {
   font-size: 3rem;
     font-family: 'Orbitron', sans-serif;
   color: #dbdcdd; 
   display: inline-block;
-  /* animation: wavy 4s ease-in-out infinite; */
 }
 
-/* Wave-like floating animation */
-/* @keyframes wavy {
-  0% {
-    transform: translateY(0) rotate(0deg); 
+/* Promo Section Media Queries */
+@media (max-width: 1200px) {
+  .overlay-text {
+    font-size: 2.7rem;
   }
-  25% {
-    transform: translateY(-6px) rotate(-1deg);
+}
+
+@media (max-width: 992px) {
+  .promo-text-container {
+    height: 80vh;
   }
-  50% {
-    transform: translateY(0) rotate(0deg);
+  
+  .overlay-text {
+    font-size: 2.4rem;
   }
-  75% {
-    transform: translateY(6px) rotate(1deg);
+}
+
+@media (max-width: 768px) {
+  .promo-text-container {
+    height: 70vh;
+    padding: 0 20px;
   }
-  100% {
-    transform: translateY(0) rotate(0deg);
+  
+  .overlay-text {
+    font-size: 2rem;
+    text-align: center;
   }
-} */
+}
+
+@media (max-width: 576px) {
+  .promo-text-container {
+    height: 60vh;
+  }
+  
+  .overlay-text {
+    font-size: 1.7rem;
+  }
+}
 
 .spline-container {
   position: relative;
@@ -204,4 +384,14 @@
   height: 20px;
   background: transparent;
   z-index: 10;
+}
+
+/* Spline Container Media Queries */
+@media (max-width: 768px) {
+  .hide-badge {
+    bottom: 5px;
+    right: 5px;
+    width: 60px;
+    height: 15px;
+  }
 }
